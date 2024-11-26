@@ -15,9 +15,9 @@ async def trigger():
 async def init_data_con():
     await Tortoise.init(
         # 私网
-        db_url=os.getenv('ms.db.url','mysql://codatta:W1PkWn2hfOAy@codatta-test-intl.rwlb.singapore.rds.aliyuncs.com/omnitags_db_orm'),
+        # db_url=os.getenv('ms.db.url','mysql://codatta:W1PkWn2hfOAy@codatta-test-intl.rwlb.singapore.rds.aliyuncs.com/omnitags_db_orm'),
         # 公网
-        # db_url='mysql://codatta:W1PkWn2hfOAy@codatta-test.rwlb.singapore.rds.aliyuncs.com/omnitags_db_orm',
+        db_url='mysql://codatta_prod:H6BCN1kFRMovMbZw@codatta-prod-intl.rwlb.singapore.rds.aliyuncs.com/omnitags_db',
         modules={'models': ['dao.models']}
     )
 
